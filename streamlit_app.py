@@ -60,7 +60,7 @@ except URLError as e:
 
 #streamlit.text("Hello from Snowflake:")
 
-streamlit.dataframe(my_data_rows)
+#streamlit.dataframe(my_data_rows)
 
 def insert_row_snowflake(new_fruit):
      with my_cnx,cursor() as my_cur:
