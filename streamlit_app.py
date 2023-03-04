@@ -35,9 +35,9 @@ if streamlit.button('Get Fruit Load List'):
    my_data_rows = get_fruit_load_list()
    streamlit.dataframe(my_data_rows)
    
-      fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
-      fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-      return fruityvice_normalized
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+return fruityvice_normalized
 
 streamlit.header("Fruityvice Fruit Advice!")
 try:
