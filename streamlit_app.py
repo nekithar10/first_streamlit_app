@@ -30,6 +30,7 @@ def get_fruit_load_list():
         return my_cur.fetchall()
    
 #Add a button to load the fruit
+
 if streamlit.button('Get Fruit Load List'):
    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
    my_data_rows = get_fruit_load_list()
@@ -37,7 +38,7 @@ if streamlit.button('Get Fruit Load List'):
    
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-return fruityvice_normalized
+#return fruityvice_normalized
 
 streamlit.header("Fruityvice Fruit Advice!")
 try:
